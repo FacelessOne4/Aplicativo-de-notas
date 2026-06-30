@@ -3,18 +3,18 @@ function verificarNota() {
     let resultado = "";
 
     if (nota >= 0 && nota <= 4.9) {
-        resultado = "Aluno Reprovado";
+        resultado = '<span style="color: red;">Aluno Reprovado</span>';
     } 
     else if (nota >= 5 && nota <= 6.9) {
-        resultado = "Aluno em Recuperação";
+        resultado = '<span style="color: orange;">Aluno em Recuperação</span>';
     } 
     else if (nota >= 7 && nota <= 10) {
-        resultado = "Aluno Aprovado";
+        resultado = '<span style="color: green;">Aluno Aprovado</span>';
     } 
     else {
-        resultado = "Nota inválida";
+        resultado = '<span style="color: gray;">Nota inválida</span>';
     }
 
-    document.getElementById("resultado").innerText =
+    document.getElementById("resultado").innerHTML =
         "Situação: " + resultado;
 }
