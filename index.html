@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim de Notas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <h2>Boletim de Notas</h2>
+            <p>Educação Escolar</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Digite sua nota</h2>
+
+            <input type="number" id="nota" min="0" max="10">
+
+            <button onclick="verificarNota()">Verificar</button>
+
+            <p id="resultado"></p>
+        </div>
+    </main>
+
+    <footer>
+        Desenvolvido por Ryan S Medeiros
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
