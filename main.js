@@ -1,20 +1,25 @@
 function verificarNota() {
-    let nota = Number(document.getElementById("nota").value);
+    let nota1 = Number(document.getElementById("nota1").value);
+    let nota2 = Number(document.getElementById("nota2").value);
+    let nota3 = Number(document.getElementById("nota3").value);
+    let nota4 = Number(document.getElementById("nota4").value);
+
+    let media = (nota1 + nota2 + nota3 + nota4) / 4;
     let resultado = "";
 
-    if (nota >= 0 && nota <= 4.9) {
+    if (media >= 0 && media <= 4.9) {
         resultado = '<span style="color: red;">Aluno Reprovado</span>';
     } 
-    else if (nota >= 5 && nota <= 6.9) {
+    else if (media >= 5 && media <= 6.9) {
         resultado = '<span style="color: orange;">Aluno em Recuperação</span>';
     } 
-    else if (nota >= 7 && nota <= 10) {
+    else if (media >= 7 && media <= 10) {
         resultado = '<span style="color: green;">Aluno Aprovado</span>';
     } 
     else {
-        resultado = '<span style="color: gray;">Nota inválida</span>';
+        resultado = '<span style="color: gray;">Notas inválidas</span>';
     }
 
     document.getElementById("resultado").innerHTML =
-        "Situação: " + resultado;
+        "Média: " + media.toFixed(1) + "<br>Situação: " + resultado;
 }
